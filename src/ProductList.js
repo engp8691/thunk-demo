@@ -6,8 +6,8 @@ const ProductList = props => {
   console.log(props);
 
   React.useEffect(() => {
-    // props.dispatch(fetchProducts());
-    fetchProducts()(props.dispatch);
+    props.dispatch(fetchProducts());
+    // fetchProducts()(props.dispatch);
   }, []);
 
   const { error, loading, products } = props;
